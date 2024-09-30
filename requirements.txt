@@ -1,0 +1,13 @@
+numpy
+scipy
+statsmodels
+matplotlib
+pandas
+lightkurve
+astropy
+corner
+nbsphinx
+dynesty
+jax
+jaxlib
+emcee
