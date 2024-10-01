@@ -7,6 +7,7 @@ Created on Thu Sep 19 09:58:23 2024
 
 import pandas as pd
 import PBjammer
+import pickle
 
 Directory = 'C:/Users/GTH025/Documents/PBjammy'
 BigData = pd.read_csv(f'{Directory}/Input/BigData.csv', sep=',', comment='#')
@@ -15,6 +16,7 @@ Mission='K2'
 Plot = True
 l1 = True
 Type = 'SG'
+Save = False
 
 for d in range(66, 67):
     if BigData.Teff[d] < 5400:
@@ -26,13 +28,14 @@ for d in range(66, 67):
                                 bp_rp=(BigData.bp_rp[d], BigData.bp_rp_e[d]), exptime=exptime, Mission=Mission, Plot=Plot, l1=l1, Type=Type)
 
     FinalResult, Peak = PBjammer.PeakBagger(Result, f, s, Plot=Plot)
-
-#%%
-
-import pickle
-
-OutputFileM = f'{Directory}/Output/Lightning McQueen/ModeID.pickle'
-OutputFileP = f'{Directory}/Output/Lightning McQueen/Peakbagged.pickle'
-
-with open(OutputFileP, 'wb') as file:
-    pickle.dump(FinalResult, file)
+    
+    # Saving the results
+    if Save:
+        OutputFileM = f'{Directory}/Output/ModeIDs/{BigData.ID[d]}.pickle'
+        OutputFileP = f'{Directory}/Output/Peakbags/{BigData.ID[d]}.pickle'
+        
+        with open(OutputFileM, 'wb') as file:
+            pickle.dump(FinalResult, file)
+        
+        with open(OutputFileP, 'wb') as file:
+            pickle.dump(FinalResult, file)
