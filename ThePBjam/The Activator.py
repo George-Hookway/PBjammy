@@ -14,37 +14,36 @@ BigData = pd.read_csv(f'{Directory}/Input/SmallData.csv', sep=',', comment='#')
 Plot = True
 l1 = True
 Save = True
-Np = 9
 
-def ModeResult(ID, numax, dnu, teff, bp_rp, l1, Type):
+def ModeResult(ID, Np, numax, dnu, teff, bp_rp, l1, Type):
     return PBjammer.Run(ID, Np, numax=numax, dnu=dnu, teff=teff, bp_rp=bp_rp, Plot=Plot, l1=l1, Type=Type)
 
-def Peakbagging(ID, Result, f, s):
-    return PBjammer.PeakBagger(ID, Np, Result, f, s, Plot=Plot)
+def Peakbagging(ID, Np, Result, f, s, Type):
+    return PBjammer.PeakBagger(ID, Np, Result, f, s, Type, Plot=Plot)
 
-for d in range(len(BigData)):
-    
+for d in range(1):
+    '''
     # Ignoring giant stars for now, with rough cut-off
-    if BigData.Teff[d] < 5400:
+    if BigData.Teff[d] < 5800 and BigData.Lum[d] > 2.5:
         print('Giant Star - moving on')
         continue
-    
+    '''
     # Let's me know what is running right now
     print(BigData.iloc[d,])
     print(f'ID: {BigData.ID[d]}')
 
     # Runs for Mode ID
-    Result, f, s, M = ModeResult(BigData.ID[d], (BigData.numax[d], BigData.numax_e[d]),
+    Result, f, s, M = ModeResult(BigData.ID[d], BigData.Np[d], (BigData.numax[d], BigData.numax_e[d]),
                                  (BigData.dnu[d], BigData.dnu_e[d]), (BigData.Teff[d], BigData.Teff_e[d]),
-                                 (BigData.bp_rp[d], BigData.bp_rp_e[d]), Plot=Plot, l1=l1, Type=BigData.Type[d])
+                                 (BigData.bp_rp[d], BigData.bp_rp_e[d]), l1=l1, Type=BigData.Type[d])
     
     # Runs for Peakbagging
-    FinalResult, Peak = Peakbagging(BigData.ID[d], Result, f, s, Plot=Plot)
+    FinalResult, Peak = Peakbagging(BigData.ID[d], BigData.Np[d], Result, f, s, BigData.Type[d])
 
     # Saving the results
     if Save:
-        OutputFileM = f'{Directory}/Output/ModeIDs/{BigData.ID[d]} - {BigData.Type[d]}.pickle'
-        OutputFileP = f'{Directory}/Output/Peakbags/{BigData.ID[d]} - {BigData.Type[d]}.pickle'
+        OutputFileM = f'{Directory}/Output/ModeIDs/{BigData.ID[d]} - {BigData.Np[d]} - {BigData.Type[d]}.pickle'
+        OutputFileP = f'{Directory}/Output/Peakbags/{BigData.ID[d]} - {BigData.Np[d]} - {BigData.Type[d]}.pickle'
         
         with open(OutputFileM, 'wb') as file:
             pickle.dump(FinalResult, file)
