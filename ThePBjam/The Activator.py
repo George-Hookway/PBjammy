@@ -21,13 +21,13 @@ def ModeResult(ID, Np, numax, dnu, teff, bp_rp, l1, Type):
 def Peakbagging(ID, Np, Result, f, s, Type):
     return PBjammer.PeakBagger(ID, Np, Result, f, s, Type, Plot=Plot)
 
-for d in range(1):
-    '''
-    # Ignoring giant stars for now, with rough cut-off
-    if BigData.Teff[d] < 5800 and BigData.Lum[d] > 2.5:
-        print('Giant Star - moving on')
+for d in range(len(BigData)):
+
+    # Ignoring stars that are "done"
+    if BigData.Done[d] == 1:
+        print('You already did this one.\nMove along\n')
         continue
-    '''
+    
     # Let's me know what is running right now
     print(BigData.iloc[d,])
     print(f'ID: {BigData.ID[d]}')
@@ -42,11 +42,14 @@ for d in range(1):
 
     # Saving the results
     if Save:
+        print('Saving....')
         OutputFileM = f'{Directory}/Output/ModeIDs/{BigData.ID[d]} - {BigData.Np[d]} - {BigData.Type[d]}.pickle'
         OutputFileP = f'{Directory}/Output/Peakbags/{BigData.ID[d]} - {BigData.Np[d]} - {BigData.Type[d]}.pickle'
-        
+
         with open(OutputFileM, 'wb') as file:
             pickle.dump(FinalResult, file)
         
         with open(OutputFileP, 'wb') as file:
             pickle.dump(FinalResult, file)
+    
+    print('Calculation Complete')
