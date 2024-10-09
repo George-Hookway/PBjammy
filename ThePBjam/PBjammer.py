@@ -25,13 +25,10 @@ def Model(x):
 def PSD(ID, Speciality):
     # Getting the power spectrum for the star.
     if Speciality == 'Standard':
-        print('Standard Configuration')
         Lightning = pd.read_csv(f'{Directory}/LightCurves/ktwo{ID}_01_kasoc-psd_slc_v1.pow', comment='#', names=['Frequency', 'Power'], sep=' ')
     elif Speciality == 'Text':
-        print('Trying text file')
         Lightning = pd.read_csv(f'{Directory}/LightCurves/{ID}_psd_tot.txt', names=['Frequency', 'Power', 'FrequencyAvg', 'PowerAvg'], sep=' ')
     elif Speciality == '3-space':
-        print('Trying 3-space separation')
         Lightning = pd.read_csv(f'{Directory}/LightCurves/ktwo{ID}_01_kasoc-psd_slc_v1.pow', comment='#', names=['Frequency', 'Power'], sep='   ')
 
     return np.array(Lightning.Frequency), np.array(Lightning.Power)
@@ -39,20 +36,23 @@ def PSD(ID, Speciality):
 def Mode20(ID, Np, numax=None, dnu=None, teff=None, bp_rp=None, Plot=None, l1=None, Type=None):
     # Identifying the mode frequnecies for peakbagging.
     try:
-        f, s = PSD(ID, 'Standard')
-    
+        f, s = PSD(ID, 'Text')
+
         M = modeID(f, s, {'teff':teff, 'bp_rp':bp_rp, 'numax':numax, 'dnu':dnu}, N_p=Np)
+        print('Contacting Text File')
         M.runl20model()
     except:
         try:
-            f, s = PSD(ID, 'Text')
-        
+            f, s = PSD(ID, 'Standard')
+
             M = modeID(f, s, {'teff':teff, 'bp_rp':bp_rp, 'numax':numax, 'dnu':dnu}, N_p=Np)
+            print('Standard Configuration')
             M.runl20model()
         except:
             f, s = PSD(ID, '3-space')
-    
+
             M = modeID(f, s, {'teff':teff, 'bp_rp':bp_rp, 'numax':numax, 'dnu':dnu}, N_p=Np)
+            print('Activating 3-space separation')
             M.runl20model()
 
     # Time for dipoles? or not, up to you.
@@ -90,7 +90,7 @@ def Dipole(M, Type):
 def PeakBagger(ID, Np, Result, f, s, Type, Plot=False):
 
     Peak = peakbag(f, s, ell=Result['ell'], freq=Result['summary']['freq'],
-                   height=Result['summary']['height'], width=Result['summary']['width'], slices=6)
+                   height=Result['summary']['height'], width=Result['summary']['width'], slices=8)
 
     Result = Peak()
 
