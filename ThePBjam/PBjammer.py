@@ -90,7 +90,7 @@ def Dipole(M, Type):
 def PeakBagger(ID, Np, Result, f, s, Type, Plot=False):
 
     Peak = peakbag(f, s, ell=Result['ell'], freq=Result['summary']['freq'],
-                   height=Result['summary']['height'], width=Result['summary']['width'], slices=8)
+                   height=Result['summary']['height'], width=Result['summary']['width'], slices=1)
 
     Result = Peak()
 

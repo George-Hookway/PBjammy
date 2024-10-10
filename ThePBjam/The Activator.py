@@ -21,7 +21,7 @@ def ModeResult(ID, Np, numax, dnu, teff, bp_rp, Type):
 def Peakbagging(ID, Np, Result, f, s, Type):
     return PBjammer.PeakBagger(ID, Np, Result, f, s, Type, Plot=Plot)
 
-for d in range(6):
+for d in range(167, 168):
 
     # Ignoring stars that are "done"
     if BigData.Done[d] == 1:
