@@ -1,0 +1,29 @@
+ID         211409088
+numax        550.899
+numax_e       12.844
+dnu           33.495
+dnu_e          0.484
+Teff            5136
+Teff_e            36
+bp_rp        1.07178
+bp_rp_e          0.1
+Lum            5.413
+Lum_e          0.232
+Type              SG
+Np                 9
+Done               0
+Name: 157, dtype: object
+ID: 211409088
+Contacting Text File
+Using epsilon of 1.4558657253924299
+Model suggests 1.45
+Plotting
+Using emcee to sample.
+Creating envelope slices
+Peakbagging slice 1/1
+Time taken 34.5 minutes
+Plotting
+Saving....
+Calculation Complete
+
+

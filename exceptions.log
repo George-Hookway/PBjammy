@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "c:\users\gth025\documents\pbjammy\testing ground.py", line 71, in <module>
+    do_stuff()
+  File "c:\users\gth025\documents\pbjammy\testing ground.py", line 66, in do_stuff
+    L = 0**-1
+        ~^^~~
+ZeroDivisionError: 0.0 cannot be raised to a negative power

@@ -889,8 +889,10 @@ def _PeakbagClassPostSpectrum(self, N):
             
             ax.plot(inst.f[inst.sel], m, color='C3', alpha=0.2)
 
-    xlims = [float(min([min(inst.f[inst.sel]) for inst in self.pbInstances])),
-             float(max([max(inst.f[inst.sel]) for inst in self.pbInstances]))]
+    xlims = [float(min([min(inst.f[inst.sel]) for inst in self.pbInstances]))-150,
+             float(max([max(inst.f[inst.sel]) for inst in self.pbInstances]))+150]
+    
+    ylims = [0, max(self.snr)*1.1]
                      
     ax.plot([-100, -100], [-100, -100], color='C3', label='Posterior samples', alpha=1)
 
@@ -899,6 +901,8 @@ def _PeakbagClassPostSpectrum(self, N):
     ax.set_xlabel(r'Frequency ($\mu \rm Hz$)')
 
     ax.set_xlim(xlims)
+    
+    ax.set_ylim(ylims)
 
     #ax.legend(loc=1)
 

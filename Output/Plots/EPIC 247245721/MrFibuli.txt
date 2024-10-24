@@ -1,0 +1,30 @@
+ID         247245721
+numax         844.24
+numax_e        9.514
+dnu           46.766
+dnu_e          0.563
+Teff            5647
+Teff_e            40
+bp_rp       0.841804
+bp_rp_e          0.1
+Lum            4.972
+Lum_e          0.198
+Type              SG
+Np                 9
+Done              10
+Name: 167, dtype: object
+ID: 247245721
+Standard Configuration
+Activating 3-space separation
+Using epsilon of 1.3011794038708429
+Model suggests 1.45
+Plotting
+Using emcee to sample.
+Creating envelope slices
+Peakbagging slice 1/1
+Time taken 20.8 minutes
+Plotting
+Saving....
+Calculation Complete
+
+

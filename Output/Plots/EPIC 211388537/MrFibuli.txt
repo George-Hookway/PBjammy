@@ -1,0 +1,48 @@
+ID         211388537
+numax        300.949
+numax_e        7.727
+dnu           21.066
+dnu_e          0.396
+Teff            5046
+Teff_e            41
+bp_rp       1.124862
+bp_rp_e          0.1
+Lum            8.622
+Lum_e           0.41
+Type             RGB
+Np                 2
+Done               0
+Name: 146, dtype: object
+ID: 211388537
+Standard Configuration
+Activating 3-space separation
+Using epsilon of 1.4115053571889475
+Model suggests 1.45
+Plotting
+Using emcee to sample.
+Creating envelope slices
+Peakbagging slice 1/1
+Time taken 1.2 minutes
+Plotting
+Saving....
+Calculation Complete
+
+
+ID         211388537
+numax        300.949
+numax_e        7.727
+dnu           21.066
+dnu_e          0.396
+Teff            5046
+Teff_e            41
+bp_rp       1.124862
+bp_rp_e          0.1
+Lum            8.622
+Lum_e           0.41
+Type              SG
+Np                 6
+Done               0
+Name: 146, dtype: object
+ID: 211388537
+Standard Configuration
+Activating 3-space separation

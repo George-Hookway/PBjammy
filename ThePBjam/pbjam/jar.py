@@ -784,7 +784,7 @@ class EmceeSampling():
 
         return walltimeFlag
     
-    def runSampler(self, nchains=None, DEfrac=1, earlyStop=True, walltime=60, nsamples=5000, checkEvery=1000, maxThin=1000, ncontrol=10, DtauLimit=5e-5):
+    def runSampler(self, nchains=None, DEfrac=1, earlyStop=True, walltime=3720, nsamples=5000, checkEvery=1000, maxThin=1000, ncontrol=10, DtauLimit=5e-5):
         """
         Runs the MCMC sampler, including burn-in and posterior sampling phases.
 

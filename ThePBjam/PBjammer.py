@@ -12,7 +12,9 @@ import pandas as pd
 from pbjam.modeID import modeID
 from pbjam.peakbagging import peakbag
 
-Directory = 'C:/Users/GTH025/Documents/PBjammy'
+#Directory = 'C:/Users/GTH025/Documents/PBjammy'
+Directory = '/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy'
+#Directory = 'G:/george/PBJammy'
 Folder = f'{Directory}/Output/Plots'
 
 def CheckSaveDir(ID):

@@ -1,0 +1,35 @@
+
+
+Traceback (most recent call last):
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/TheActivator.py", line 67, in LetUsBegin
+    Activate()
+TypeError: Activate() missing 1 required positional argument: 'n'
+ID         246003951
+numax        932.401
+numax_e       32.998
+dnu           45.381
+dnu_e          0.404
+Teff            6451
+Teff_e            43
+bp_rp       0.602519
+bp_rp_e          0.1
+Lum            9.138
+Lum_e          0.106
+Type              MS
+Np                14
+Done               0
+Name: 116, dtype: object
+ID: 246003951
+Contacting Text File
+Using epsilon of 0.9346334034190611
+Model suggests 0.9823779999999998
+Plotting
+Using emcee to sample.
+Creating envelope slices
+Peakbagging slice 1/1
+Time taken 161.5 minutes
+Plotting
+Saving....
+Calculation Complete
+
+

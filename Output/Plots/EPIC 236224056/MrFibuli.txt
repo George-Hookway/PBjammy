@@ -1,0 +1,29 @@
+ID         236224056
+numax        764.233
+numax_e        5.991
+dnu           43.047
+dnu_e          1.021
+Teff            5215
+Teff_e            33
+bp_rp       1.009615
+bp_rp_e          0.1
+Lum            3.648
+Lum_e           0.04
+Type              SG
+Np                 9
+Done               0
+Name: 158, dtype: object
+ID: 236224056
+Standard Configuration
+Using epsilon of 1.414143600404781
+Model suggests 1.45
+Plotting
+Using emcee to sample.
+Creating envelope slices
+Peakbagging slice 1/1
+Time taken 32.7 minutes
+Plotting
+Saving....
+Calculation Complete
+
+

@@ -1,0 +1,23 @@
+ID         228789925
+numax       1123.927
+numax_e        8.482
+dnu           60.703
+dnu_e          0.636
+Teff            5735
+Teff_e            34
+bp_rp       0.832477
+bp_rp_e          0.1
+Lum            2.992
+Lum_e          0.039
+Type              SG
+Np                10
+Done              10
+Name: 168, dtype: object
+ID: 228789925
+Standard Configuration
+Activating 3-space separation
+Using epsilon of 1.391520189630354
+Model suggests 1.45
+Plotting
+Using emcee to sample.
+Creating envelope slices

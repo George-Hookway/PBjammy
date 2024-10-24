@@ -1,0 +1,18 @@
+ID         228837389
+numax         552.51
+numax_e        5.862
+dnu           35.307
+dnu_e          0.617
+Teff            5353
+Teff_e            29
+bp_rp       0.927497
+bp_rp_e          0.1
+Lum            4.603
+Lum_e          0.044
+Type              SG
+Np                 9
+Done               0
+Name: 163, dtype: object
+ID: 228837389
+Standard Configuration
+Activating 3-space separation

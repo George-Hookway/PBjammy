@@ -1,0 +1,18 @@
+ID         201725213
+numax        706.171
+numax_e        9.914
+dnu           41.199
+dnu_e          0.567
+Teff            5278
+Teff_e            37
+bp_rp       1.021303
+bp_rp_e          0.1
+Lum            4.223
+Lum_e          0.091
+Type              SG
+Np                 9
+Done               0
+Name: 161, dtype: object
+ID: 201725213
+Standard Configuration
+Activating 3-space separation

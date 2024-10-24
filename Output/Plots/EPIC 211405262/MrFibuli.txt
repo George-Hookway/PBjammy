@@ -1,0 +1,17 @@
+ID         211405262
+numax        420.755
+numax_e       11.261
+dnu           26.533
+dnu_e          0.521
+Teff            5091
+Teff_e            39
+bp_rp       1.088292
+bp_rp_e          0.1
+Lum            6.486
+Lum_e          0.269
+Type              SG
+Np                 9
+Done               0
+Name: 156, dtype: object
+ID: 211405262
+Contacting Text File

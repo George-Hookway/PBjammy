@@ -1,0 +1,36 @@
+
+
+Traceback (most recent call last):
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/TheActivator.py", line 67, in LetUsBegin
+    Activate()
+TypeError: Activate() missing 1 required positional argument: 'n'
+ID         247643791
+numax       1977.856
+numax_e       50.663
+dnu           84.841
+dnu_e          0.513
+Teff            6321
+Teff_e            42
+bp_rp       0.644663
+bp_rp_e          0.1
+Lum            3.263
+Lum_e          0.026
+Type              MS
+Np                14
+Done               0
+Name: 93, dtype: object
+ID: 247643791
+Standard Configuration
+Activating 3-space separation
+Using epsilon of 1.1585848679448914
+Model suggests 1.076238
+Plotting
+Using emcee to sample.
+Creating envelope slices
+Peakbagging slice 1/1
+Time taken 155.0 minutes
+Plotting
+Saving....
+Calculation Complete
+
+

@@ -1,0 +1,206 @@
+ID         211414687
+numax        204.775
+numax_e          5.2
+dnu           15.092
+dnu_e          0.311
+Teff            4916
+Teff_e            36
+bp_rp       1.156933
+bp_rp_e          0.1
+Lum           12.388
+Lum_e          0.593
+Type             RGB
+Np                 2
+Done               0
+Name: 138, dtype: object
+ID: 211414687
+Standard Configuration
+Activating 3-space separation
+
+
+Traceback (most recent call last):
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/TheActivator.py", line 68, in LetUsBegin
+    Activate(n)
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/TheActivator.py", line 41, in Activate
+    Result, f, s, M = ModeResult(BigData.ID[d], BigData.Np[d], (BigData.numax[d], BigData.numax_e[d]),
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/TheActivator.py", line 23, in ModeResult
+    return PBjammer.Run(ID, Np, numax=numax, dnu=dnu, teff=teff, bp_rp=bp_rp, Plot=Plot, l1=l1, Type=Type)
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/PBjammer.py", line 113, in Run
+    Result, f, s, M = Mode20(ID, Np, numax=numax, dnu=dnu, teff=teff, bp_rp=bp_rp, Plot=Plot, l1=l1, Type=Type)
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/PBjammer.py", line 63, in Mode20
+    Dipole(M, Type)
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/PBjammer.py", line 88, in Dipole
+    M.runl1model(model=Type)
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/pbjam/modeID.py", line 177, in runl1model
+    self.l1model = RGBl1model(f, s,
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/pbjam/l1models.py", line 1010, in __init__
+    self.setPriors()
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/pbjam/l1models.py", line 1071, in setPriors
+    self.DR.ppf, self.DR.pdf, self.DR.logpdf, self.DR.cdf = dist.getQuantileFuncs(self.DR.dataF)
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/pbjam/distributions.py", line 44, in getQuantileFuncs
+    kde.fit(cut=cut)
+  File "/rds/homes/g/gth025/.local/lib/python3.9/site-packages/statsmodels/nonparametric/kde.py", line 168, in fit
+    density, grid, bw = kdensityfft(
+  File "/rds/homes/g/gth025/.local/lib/python3.9/site-packages/statsmodels/nonparametric/kde.py", line 558, in kdensityfft
+    bw = bandwidths.select_bandwidth(x, bw, kern)
+  File "/rds/homes/g/gth025/.local/lib/python3.9/site-packages/statsmodels/nonparametric/bandwidths.py", line 176, in select_bandwidth
+    bandwidth = bandwidth_funcs[bw](x, kernel)
+  File "/rds/homes/g/gth025/.local/lib/python3.9/site-packages/statsmodels/nonparametric/bandwidths.py", line 137, in bw_normal_reference
+    return C * A * n ** (-0.2)
+ZeroDivisionError: 0.0 cannot be raised to a negative power
+ID         211414687
+numax        204.775
+numax_e          5.2
+dnu           15.092
+dnu_e          0.311
+Teff            4916
+Teff_e            36
+bp_rp       1.156933
+bp_rp_e          0.1
+Lum           12.388
+Lum_e          0.593
+Type             RGB
+Np                 2
+Done               0
+Name: 138, dtype: object
+ID: 211414687
+Standard Configuration
+Activating 3-space separation
+
+
+Traceback (most recent call last):
+  File "g:\george\pbjammy\thepbjam\theactivator.py", line 68, in LetUsBegin
+    Activate(n)
+  File "g:\george\pbjammy\thepbjam\theactivator.py", line 41, in Activate
+    Result, f, s, M = ModeResult(BigData.ID[d], BigData.Np[d], (BigData.numax[d], BigData.numax_e[d]),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "g:\george\pbjammy\thepbjam\theactivator.py", line 23, in ModeResult
+    return PBjammer.Run(ID, Np, numax=numax, dnu=dnu, teff=teff, bp_rp=bp_rp, Plot=Plot, l1=l1, Type=Type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\george\PBjammy\ThePBjam\PBjammer.py", line 113, in Run
+    Result, f, s, M = Mode20(ID, Np, numax=numax, dnu=dnu, teff=teff, bp_rp=bp_rp, Plot=Plot, l1=l1, Type=Type)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\george\PBjammy\ThePBjam\PBjammer.py", line 63, in Mode20
+    Dipole(M, Type)
+  File "G:\george\PBjammy\ThePBjam\PBjammer.py", line 88, in Dipole
+    M.runl1model(model=Type)
+  File "G:\george\PBjammy\ThePBjam\pbjam\modeID.py", line 177, in runl1model
+    self.l1model = RGBl1model(f, s,
+                 ^^^^^^^^^^^^^^^^
+  File "G:\george\PBjammy\ThePBjam\pbjam\l1models.py", line 1010, in __init__
+    self.setPriors()
+  File "G:\george\PBjammy\ThePBjam\pbjam\l1models.py", line 1071, in setPriors
+    self.DR.ppf, self.DR.pdf, self.DR.logpdf, self.DR.cdf = dist.getQuantileFuncs(self.DR.dataF)
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\george\PBjammy\ThePBjam\pbjam\distributions.py", line 44, in getQuantileFuncs
+    kde.fit(cut=cut)
+  File "C:\Users\GTH025\AppData\Local\anaconda3\Lib\site-packages\statsmodels\nonparametric\kde.py", line 168, in fit
+    density, grid, bw = kdensityfft(
+                        ^^^^^^^^^^^^
+  File "C:\Users\GTH025\AppData\Local\anaconda3\Lib\site-packages\statsmodels\nonparametric\kde.py", line 558, in kdensityfft
+    bw = bandwidths.select_bandwidth(x, bw, kern)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GTH025\AppData\Local\anaconda3\Lib\site-packages\statsmodels\nonparametric\bandwidths.py", line 176, in select_bandwidth
+    bandwidth = bandwidth_funcs[bw](x, kernel)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GTH025\AppData\Local\anaconda3\Lib\site-packages\statsmodels\nonparametric\bandwidths.py", line 137, in bw_normal_reference
+    return C * A * n ** (-0.2)
+                   ~~^^~~~~~~~
+ZeroDivisionError: 0.0 cannot be raised to a negative power
+ID         211414687
+numax        204.775
+numax_e          5.2
+dnu           15.092
+dnu_e          0.311
+Teff            4916
+Teff_e            36
+bp_rp       1.156933
+bp_rp_e          0.1
+Lum           12.388
+Lum_e          0.593
+Type             RGB
+Np                 2
+Done               0
+Name: 138, dtype: object
+ID: 211414687
+Standard Configuration
+Activating 3-space separation
+
+
+Traceback (most recent call last):
+  File "g:\george\pbjammy\thepbjam\theactivator.py", line 68, in LetUsBegin
+    Activate(n)
+  File "g:\george\pbjammy\thepbjam\theactivator.py", line 41, in Activate
+    Result, f, s, M = ModeResult(BigData.ID[d], BigData.Np[d], (BigData.numax[d], BigData.numax_e[d]),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "g:\george\pbjammy\thepbjam\theactivator.py", line 23, in ModeResult
+    return PBjammer.Run(ID, Np, numax=numax, dnu=dnu, teff=teff, bp_rp=bp_rp, Plot=Plot, l1=l1, Type=Type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\george\PBjammy\ThePBjam\PBjammer.py", line 113, in Run
+    Result, f, s, M = Mode20(ID, Np, numax=numax, dnu=dnu, teff=teff, bp_rp=bp_rp, Plot=Plot, l1=l1, Type=Type)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\george\PBjammy\ThePBjam\PBjammer.py", line 63, in Mode20
+    Dipole(M, Type)
+  File "G:\george\PBjammy\ThePBjam\PBjammer.py", line 88, in Dipole
+    M.runl1model(model=Type)
+  File "G:\george\PBjammy\ThePBjam\pbjam\modeID.py", line 177, in runl1model
+    self.l1model = RGBl1model(f, s,
+                 ^^^^^^^^^^^^^^^^
+  File "G:\george\PBjammy\ThePBjam\pbjam\l1models.py", line 1010, in __init__
+    self.setPriors()
+  File "G:\george\PBjammy\ThePBjam\pbjam\l1models.py", line 1071, in setPriors
+    self.DR.ppf, self.DR.pdf, self.DR.logpdf, self.DR.cdf = dist.getQuantileFuncs(self.DR.dataF)
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\george\PBjammy\ThePBjam\pbjam\distributions.py", line 44, in getQuantileFuncs
+    kde.fit(cut=cut)
+  File "C:\Users\GTH025\AppData\Local\anaconda3\Lib\site-packages\statsmodels\nonparametric\kde.py", line 168, in fit
+    density, grid, bw = kdensityfft(
+                        ^^^^^^^^^^^^
+  File "C:\Users\GTH025\AppData\Local\anaconda3\Lib\site-packages\statsmodels\nonparametric\kde.py", line 558, in kdensityfft
+    bw = bandwidths.select_bandwidth(x, bw, kern)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GTH025\AppData\Local\anaconda3\Lib\site-packages\statsmodels\nonparametric\bandwidths.py", line 176, in select_bandwidth
+    bandwidth = bandwidth_funcs[bw](x, kernel)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GTH025\AppData\Local\anaconda3\Lib\site-packages\statsmodels\nonparametric\bandwidths.py", line 137, in bw_normal_reference
+    return C * A * n ** (-0.2)
+                   ~~^^~~~~~~~
+ZeroDivisionError: 0.0 cannot be raised to a negative power
+ID         211414687
+numax        204.775
+numax_e          5.2
+dnu           15.092
+dnu_e          0.311
+Teff            4916
+Teff_e            36
+bp_rp       1.156933
+bp_rp_e          0.1
+Lum           12.388
+Lum_e          0.593
+Type              SG
+Np                 6
+Done               0
+Name: 138, dtype: object
+ID: 211414687
+Standard Configuration
+Activating 3-space separation
+
+
+Traceback (most recent call last):
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/TheActivator.py", line 68, in LetUsBegin
+    Activate(n)
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/TheActivator.py", line 41, in Activate
+    Result, f, s, M = ModeResult(BigData.ID[d], BigData.Np[d], (BigData.numax[d], BigData.numax_e[d]),
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/TheActivator.py", line 23, in ModeResult
+    return PBjammer.Run(ID, Np, numax=numax, dnu=dnu, teff=teff, bp_rp=bp_rp, Plot=Plot, l1=l1, Type=Type)
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/PBjammer.py", line 113, in Run
+    Result, f, s, M = Mode20(ID, Np, numax=numax, dnu=dnu, teff=teff, bp_rp=bp_rp, Plot=Plot, l1=l1, Type=Type)
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/PBjammer.py", line 63, in Mode20
+    Dipole(M, Type)
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/PBjammer.py", line 88, in Dipole
+    M.runl1model(model=Type)
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/pbjam/modeID.py", line 187, in runl1model
+    self.l1Samples  = self.l1model.runSampler(progress=progress,
+  File "/rds/projects/n/nielsemb-plato-peakbagging/george/PBjammy/ThePBjam/pbjam/jar.py", line 968, in runSampler
+    ndims = len(self.priors)
+AttributeError: 'Mixl1model' object has no attribute 'priors'
