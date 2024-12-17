@@ -30,7 +30,7 @@ for s in range(len(BigData)):
     if BigData.Done[s] == 1:
         Colour = 'green'
         Size = 15
-    elif BigData.Done[s] == 10:
+    elif BigData.Done[s] == 10 or BigData.Done[s] == 2:
         Colour = 'purple'
         Size = 8
     plt.errorbar(BigData.Teff[s], BigData.Lum[s], yerr=BigData.Lum_e[s], xerr=BigData.Teff_e[s],
