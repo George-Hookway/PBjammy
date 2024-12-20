@@ -5,20 +5,9 @@ Created on Mon Oct 21 14:53:25 2024
 @author: GTH025
 """
 
-import multiprocessing
-import TheActivator
-import traceback
+for Number in range(0, 173):
+    Text = f'import TheActivator\n\nTheActivator.LetUsBegin({Number})\n'
 
-def Activate(n):
-    TheActivator.LetUsBegin(n)
-
-def Stuff():
-    Stars = 66
-    for n in range(Stars):
-        exec(f'Gunray_{n} = multiprocessing.Process(target=Activate, args=(n, ))')
-        exec(f'Gunray_{n}.start()')
-
-    for k in range(Stars):
-        exec(f'Gunray_{k}.join()')
-
-Stuff()
+    with open(f'G:/george/PBjammy/ThePBjam/Star {Number}.py', 'w') as File:
+        File.write(Text)
+    File.close()

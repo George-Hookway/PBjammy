@@ -63,7 +63,7 @@ class modeID(plotting, ):
 
         # Set frequency range to compute the model on. Default is one radial order above/below the requested number.
         if self.freqLimits is None:
-            self.freqLimits = [self.obs['numax'][0] - self.obs['dnu'][0]*(self.N_p//2+1), 
+            self.freqLimits = [self.obs['numax'][0] - self.obs['dnu'][0]*(self.N_p//2+1),
                                self.obs['numax'][0] + self.obs['dnu'][0]*(self.N_p//2+1),]
             
         self.sel = (np.array(self.freqLimits).min() < self.f) & (self.f < np.array(self.freqLimits).max())   
@@ -115,7 +115,7 @@ class modeID(plotting, ):
         self.l20result = self.l20model.parseSamples(l20samples_u)
 
         self.result = self.mergeResults(l20result=self.l20result)
- 
+
         return self.l20result
 
     def runl1model(self, progress=True, sampler_kwargs={}, logl_kwargs={}, model='MS', PCAsamples=500, PCAdims=7):
@@ -137,7 +137,7 @@ class modeID(plotting, ):
         PCAsamples : int, optional
             Number of samples for PCA. Default is 100.
         PCAdims : int, optional
-            Number of dimensions for PCA. Default is 5.
+            Number of dimensions for PCA. Default is 7.
 
         Returns
         -------

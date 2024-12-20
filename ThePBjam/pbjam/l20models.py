@@ -51,9 +51,9 @@ class Asyl20model(jar.DynestySampling, jar.generalModelFuncs):
     """
 
     def __init__(self, f, s, obs, addPriors, N_p, PCAsamples, PCAdims, vis={'V20': 0.71}, priorPath=None):
-        
+
         self.__dict__.update((k, v) for k, v in locals().items() if k not in ['self'])
- 
+
         self.Nyquist = self.f[-1]
 
         modelParLabels = ['dnu', 'numax', 
@@ -66,9 +66,9 @@ class Asyl20model(jar.DynestySampling, jar.generalModelFuncs):
                           'H2_exp', 'H3_power', 
                           'H3_nu', 'H3_exp', 
                           'shot', 'nurot_e',  
-                          'inc',
+                          'inc'
                          ]
-        
+
         self.setLabels(self.addPriors, modelParLabels)
          
         self.log_obs = {x: jar.to_log10(*self.obs[x]) for x in self.obs.keys() if x in self.logpars}
@@ -92,7 +92,7 @@ class Asyl20model(jar.DynestySampling, jar.generalModelFuncs):
     def _makeEmpties(self):
         """ 
         Make a bunch of static matrices so we don't need to make them during
-        sampling. Just for keeping things a bit neater. 
+        sampling. Just for keeping things a bit neater.
         """
         
         self.N_p_range = jnp.arange(self.N_p)
@@ -108,14 +108,14 @@ class Asyl20model(jar.DynestySampling, jar.generalModelFuncs):
         logpdf and cdf as callable methods. 
 
         The latent parameters are assigned initially followed by any priors that might 
-        be manually specified in addPriors.     
+        be manually specified in addPriors.
         """
 
         self.priors = {}
 
         for i, key in enumerate(self.latentLabels):
             self.priors[key] = dist.distribution(self.DR.ppf[i], 
-                                                 self.DR.pdf[i], 
+                                                 self.DR.pdf[i],
                                                  self.DR.logpdf[i], 
                                                  self.DR.cdf[i])
 
@@ -163,14 +163,14 @@ class Asyl20model(jar.DynestySampling, jar.generalModelFuncs):
         Parameters included in the addPriors argument are not included in the 
         PCA dimensionality reduction.
 
-        Each latent parameter is assigned a parameter label `theta_i`. 
+        Each latent parameter is assigned a parameter label `theta_i`.
         """
- 
+
         _obs = {x: jar.to_log10(*self.obs[x]) for x in self.obs.keys() if x in ['numax', 'dnu', 'teff']}
-         
+
         for key in ['bp_rp']:
             _obs[key] = self.obs[key]
-         
+
         self.DR = PCA(_obs, self.pcaLabels, self.priorPath, self.PCAsamples, selectLabels=['numax', 'dnu', 'teff', 'bp_rp']) 
 
         self.DR.fit_weightedPCA(self.PCAdims)
@@ -178,9 +178,9 @@ class Asyl20model(jar.DynestySampling, jar.generalModelFuncs):
         _Y = self.DR.transform(self.DR.dataF)
 
         self.DR.ppf, self.DR.pdf, self.DR.logpdf, self.DR.cdf = dist.getQuantileFuncs(_Y)
-        
+
         self.latentLabels = ['theta_%i' % (i) for i in range(self.PCAdims)]
-       
+
     def model(self, thetaU):
         """
         Computes the model spectrum by combining the l20 mode pairs and background components.
@@ -252,12 +252,12 @@ class Asyl20model(jar.DynestySampling, jar.generalModelFuncs):
 
             # Adding l=0
             modes += jar.lor(self.f, nu0_p[n], Hs0[n], mode_width) 
-            
+
             # Adding l=2 multiplet
             for m in [-2, -1, 0, 1, 2]:
-                
+
                 H = Hs0[n] * self.vis['V20'] * jar.visell2(abs(m), inc)
-                
+
                 f = nu0_p[n] - d02 + m * nurot_e
 
                 modes += jar.lor(self.f, f, H, mode_width)
@@ -311,7 +311,7 @@ class Asyl20model(jar.DynestySampling, jar.generalModelFuncs):
         """
     
         return numax / dnu - eps
-    
+
     def _get_n_p(self, nmax):
         """Compute radial order numbers.
 
@@ -321,7 +321,7 @@ class Asyl20model(jar.DynestySampling, jar.generalModelFuncs):
         Parameters
         ----------
         nmax : float
-            Frequency of maximum power of the oscillation envelope.
+            Radial order at frequency of maximum power of the oscillation envelope.
 
         Returns
         -------
@@ -329,11 +329,11 @@ class Asyl20model(jar.DynestySampling, jar.generalModelFuncs):
             Array of norders radial orders (integers) around nu_max (nmax).
         """
 
-        below = jnp.floor(nmax - self.N_p_mid).astype(int)
-         
-        enns = self.N_p_range + below
+        above = jnp.ceil(nmax - self.N_p_mid).astype(int)
 
-        return enns 
+        enns = self.N_p_range + above
+
+        return enns
 
     def asymptotic_nu_p(self, numax, dnu, eps_p, alpha_p, **kwargs):
         """ Compute the l=0 mode frequencies from the asymptotic relation for
@@ -353,7 +353,7 @@ class Asyl20model(jar.DynestySampling, jar.generalModelFuncs):
         Returns
         -------
         nu0s : ndarray
-            Array of l=0 mode frequencies from the asymptotic relation (muHz). 
+            Array of l=0 mode frequencies from the asymptotic relation (muHz).
         """
         
         n_p_max = self._get_n_p_max(dnu, numax, eps_p)
@@ -456,4 +456,3 @@ class Asyl20model(jar.DynestySampling, jar.generalModelFuncs):
         jar.modeUpdoot(result, W2_samps, 'width', self.N_p)
   
         return result
-

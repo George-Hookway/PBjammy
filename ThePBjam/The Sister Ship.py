@@ -5,21 +5,9 @@ Created on Wed Oct 23 10:03:25 2024
 @author: gth025
 """
 
-import multiprocessing
-import TheActivator
-import traceback
+for Number in range(0, 173):
+    Text = f'#!/usr/bin/env bash\n#SBATCH --nodes 1\n#SBATCH --ntasks 1\n#SBATCH --qos bbdefault\n#SBATCH --time 05:00:00\n#SBATCH --mem 32G\n#SBATCH --account=nielsemb-plato-peakbagging\n\nmodule purge\nmodule load bluebear\nmodule load Python\n\npython -u \'Star {Number}.py\''
 
-def Activate(n):
-    TheActivator.LetUsBegin(n)
-
-def Stuff():
-    Stars = 66
-    NewStars = 66
-    for n in range(Stars, Stars+NewStars):
-        exec(f'Gunray_{n} = multiprocessing.Process(target=Activate, args=(n, ))')
-        exec(f'Gunray_{n}.start()')
-
-    for k in range(Stars, Stars+NewStars):
-        exec(f'Gunray_{k}.join()')
-
-Stuff()
+    with open(f'G:/george/PBjammy/ThePBjam/Runner{Number}.sh', 'w', newline='\n') as File:
+        File.write(Text)
+    File.close()

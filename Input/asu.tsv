@@ -1,0 +1,431 @@
+#																	
+#   VizieR Astronomical Server vizier.cds.unistra.fr																	
+#    Date: 2024-12-03T10:36:53 [V7.4.2]																	
+"#   In case of problem, please report to:"	cds-question@unistra.fr																
+#																	
+#																	
+#Coosys	J2000:	eq_FK5 J2000															
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved															
+#INFO	request_date=2024-12-03T10:36:54	  Query execution date															
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-oc.form=dec&-source=J/A+A/688/A13/table2&-order=I&-out=EPIC&-sort=EPIC&-out=Campaign&-out=Kpmag&-out=theta&-out=e_theta&-out=teffIRFM&-out=e_teffIRFM&-out=teffSPC&-out=e_teffSPC&-out=logg&-out=e_logg&-out=[Fe/H]&-out=e_[Fe/H]&-out=vsini&-out=e_vsini&-out=RVLOS&-out=e_RVLOS&-out=Notes&-out.max=50&	  Full request URL (POST)															
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher															
+#INFO	server_software=7.4.2	  Software version															
+#INFO	publisher=CDS	  Data centre that produced the VOTable															
+																	
+#RESOURCE=yCat_36880013																	
+#Name: J/A+A/688/A13																	
+"#Title: K2 asteroseismic KEYSTONE Sample. I. (Lund+, 2024)"																	
+#INFO	ivoid=ivo://cds.vizier/j/a+a/688/a13	    IVOID of underlying data collection															
+#INFO	creator=Lund M.N.	    First author or institution															
+#INFO	cites=bibcode:2024A&A...688A..13L	    Article or Data origin sources															
+#INFO	editor=Astronomy and Astrophysics	    Editor name (article)															
+#INFO	original_date=2024	    Year of the article publication															
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A+A/688/A13	    Dataset landing page															
+#INFO	citation=doi:10.26093/cds/vizier.36880013	    Dataset identifier that can be used for citation															
+#INFO	publication_date=2024-11-21	    Date of first publication in the data centre															
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI															
+#INFO	*-sort=211405262																
+#Constraint 211405262																	
+#Table	J_A_A_688_A13_table2:																
+#Name: J/A+A/688/A13/table2																	
+#Title: Atmospheric properties																	
+#Column	EPIC	(I9)	EPIC identification number	[ucd=meta.id;meta.main]													
+#Column	Campaign	(a12)	K2 observing Campaign(s) (1)	[ucd=meta.note]													
+#Column	Kpmag	(F6.3)	Kepler magnitude	[ucd=phot.mag;em.opt]													
+#Column	theta	(I3)	? IRFM angular diameter	[ucd=phys.angSize]													
+#Column	e_theta	(I1)	? Uncertainty on IRFM angular diameter	[ucd=stat.error;pos.posAng]													
+#Column	teffIRFM	(I4)	? IRFM effective temperature	[ucd=phys.temperature.effective]													
+#Column	e_teffIRFM	(I3)	? Uncertainty on IRFM effective temperature	[ucd=stat.error]													
+#Column	teffSPC	(I4)	? SPC effective temperature	[ucd=phys.temperature.effective]													
+#Column	e_teffSPC	(I3)	? Uncertainty on SPC effective temperature	[ucd=stat.error]													
+#Column	logg	(F6.3)	? Log SPC surface gravity	[ucd=phys.gravity]													
+#Column	e_logg	(F6.3)	? Uncertainty on log SPC surface gravity	[ucd=stat.error]													
+#Column	[Fe/H]	(F6.3)	? SPC metallicity	[ucd=phys.abund.Z]													
+#Column	e_[Fe/H]	(F6.3)	Uncertainty on SPC metallicity	[ucd=stat.error;phys.abund.Fe]													
+#Column	vsini	(F6.3)	? SPC projected rotation velocity	[ucd=phys.veloc.rotat]													
+#Column	e_vsini	(F6.3)	? Uncertainty on SPC projected rotation velocity	[ucd=stat.error;phys.veloc.rotat]													
+#Column	RVLOS	(F8.3)	? SPC radial velocity	[ucd=phys.veloc;pos.heliocentric]													
+#Column	e_RVLOS	(F6.3)	? Uncertainty on SPC radial velocity	[ucd=stat.error]													
+#Column	Notes	(A3)	Notes on cluster membership and non-standard spectroscopic and astrometric inputs (2)	[ucd=meta.note]													
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+211405262	16*;18;A    	12.663	35	2	5091	39	5150	82	3.547	0.101	0.135	0.101	3.47	0.5	34.181	0.1	a
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=211409088																
+#Constraint 211409088																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+211409088	5*;16*;18;A 	12.817	31	2	5136	36	5198	102	3.666	0.14	0.267	0.101	5.31	0.52	33.195	0.148	ab*
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=211411922																
+#Constraint 211411922																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+211411922	5*;16*;18*;A	12.84	30	1	5268	37	5216	100	3.692	0.069	-0.066	0.009	      	      	34.29	0.93	abe
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=212291429																
+#Constraint 212291429																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+212291429	6	7.837	165	3	6625	46	6750	77	4.226	0.1	0.11	0.101	48.61	0.5	-7.677	0.334	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=212306203																
+#Constraint 212306203																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+212306203	6	8.781	122	2	6790	44	6725	77	4.221	0.1	-0.11	0.101	12.19	0.5	-1.236	0.09	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=213332010																
+#Constraint 213332010																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+213332010	7	7.878	194	3	6046	40	5963	77	4.077	0.1	-0.119	0.101	5.26	0.5	27.721	0.073	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=220292272																
+#Constraint 220292272																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+220292272	8	6.488	326	4	6468	49	6404	77	4.065	0.1	-0.055	0.101	18.09	0.5	3.895	0.119	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=228775782																
+#Constraint 228775782																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+228775782	10	8.373	242	4	5810	40	5750	77	4.253	0.1	0.237	0.101	14.75	0.5	17.085	0.051	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=246054188																
+#Constraint 246054188																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+246054188	12	8.993	136	2	6100	45	6094	77	4.065	0.1	-0.078	0.101	6.76	0.5	36.52	0.06	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=246099088																
+#Constraint 246099088																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+246099088	12	6.653	300	4	6505	40	6541	77	4.292	0.1	-0.182	0.101	14.97	0.5	16.209	0.029	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=246134147																
+#Constraint 246134147																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+246134147	12;19;A     	7.988	176	3	6237	45	6135	77	4.196	0.1	0.004	0.101	7.6	0.5	18.772	0.085	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=246212144																
+#Constraint 246212144																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+246212144	12;19;A     	9.031	120	2	6365	49	6214	77	3.961	0.1	-0.04	0.101	9.72	0.5	-3.951	0.027	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=246256752																
+#Constraint 246256752																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+246256752	12	6.561	345	5	6183	47	6165	77	4.04	0.1	-0.183	0.101	6.851	0.5	-10.141	0.056	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=246418246																
+#Constraint 246418246																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+246418246	19	7.678	222	3	5948	35	5937	77	4.24	0.1	-0.167	0.101	3.46	0.5	9.761	0.054	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=247992384																
+#Constraint 247992384																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+247992384	13	8.582	184	2	6390	35	6373	77	4.302	0.1	-0.232	0.101	12.07	0.5	-1.642	0.056	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=248530476																
+#Constraint 248530476																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+248530476	14	8.907	123	3	6465	61	6448	77	4.08	0.1	-0.209	0.101	13.77	0.5	0.512	0.035	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=248643218																
+#Constraint 248643218																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+248643218	14	8.177	168	3	6194	54	6153	77	4.047	0.1	-0.001	0.101	9.34	0.5	16.191	0.054	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=248662379																
+#Constraint 248662379																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+248662379	14	8.769	145	3	6167	60	6045	77	4.278	0.1	-0.33	0.101	4.82	0.5	7.636	0.028	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=248665653																
+#Constraint 248665653																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+248665653	14	9.066	122	3	5983	60	5859	77	4.045	0.1	0.212	0.101	6.38	0.5	-4.22	0.026	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=248777106																
+#Constraint 248777106																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+248777106	14	9.204	123	4	5573	40	5662	77	4.064	0.1	0.5	0.101	3.494	0.5	2.34	0.045	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=248842300																
+#Constraint 248842300																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+248842300	14	6.485	332	4	6445	35	6429	77	4.182	0.1	-0.187	0.101	13.541	0.5	23.687	0.076	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=248891803																
+#Constraint 248891803																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+248891803	14	9.167	107	2	6062	42	6165	77	4.054	0.1	-0.116	0.101	7.56	0.5	-6.614	0.021	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=249154730																
+#Constraint 249154730																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+249154730	15	8.531	182	3	6531	53	6436	77	4.193	0.1	-0.129	0.101	9.93	0.5	26.135	0.044	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=249589868																
+#Constraint 249589868																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+249589868	15	8.785	121	2	6475	52	6496	77	4.279	0.1	-0.022	0.101	21.19	0.5	29.914	0.189	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=249602800																
+#Constraint 249602800																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+249602800	15	7.739	221	3	5877	40	5900	77	4.084	0.1	-0.08	0.101	3.77	0.5	15.362	0.019	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=249627169																
+#Constraint 249627169																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+249627169	15	9.564	171	3	4978	79	5039	77	3.645	0.1	-0.398	0.101	1.66	0.5	103.434	0.038	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=249829497																
+#Constraint 249829497																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+249829497	15	8.406	172	3	5778	39	5787	77	4.211	0.1	-0.352	0.101	2.73	0.5	-29.72	0.047	
+																	
+																	
+#RESOURCE=																	
+#Name:																	
+#Title:																	
+#INFO	*-sort=249874527																
+#Constraint 249874527																	
+#Table	J_A_A_688_A13_table2:J_A_A_688_A13_table2																
+#Name: J/A+A/688/A13/table2																	
+#Title:																	
+EPIC	Campaign	Kpmag	theta	e_theta	teffIRFM	e_teffIRFM	teffSPC	e_teffSPC	logg	e_logg	[Fe/H]	e_[Fe/H]	vsini	e_vsini	RVLOS	e_RVLOS	Notes
+ 	 	mag	uarcsec	uarcsec	K	K	K	K	[cm/s2]	[cm/s2]	[Sun]	[Sun]	km/s	km/s	km/s	km/s	
+---------	------------	------	---	-	----	---	----	---	------	------	------	------	------	------	--------	------	---
+249874527	15	7.593	197	3	6425	49	6428	77	4.167	0.1	0.031	0.101	18.75	0.5	4.404	0.058	
